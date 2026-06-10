@@ -1,10 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://answering-hard-questions.vercel.app',
+	markdown: {
+		// Open external (http/https) links in a new tab; internal links unaffected.
+		rehypePlugins: [
+			[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
+		],
+	},
 	integrations: [
 		starlight({
 			title: 'Answering Hard Questions',
