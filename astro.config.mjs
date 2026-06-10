@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://my-wiki.vercel.app',
+	site: 'https://answering-hard-questions.vercel.app',
 	integrations: [
 		starlight({
 			title: 'Answering Hard Questions',
