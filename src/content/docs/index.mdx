@@ -1,43 +1,41 @@
 ---
-title: Most Promising Interventions to Reduce Global Inequality
-description: A research wiki surveying interventions to reduce global concentration of wealth and power, the evidence behind them, and the organizations and careers advancing them.
+title: Answering Hard Questions
+description: Research syntheses on big, contested problems — what's been tried, what the evidence says, and who is doing the work.
 template: splash
 hero:
-  tagline: A research synthesis on reducing the global concentration of wealth and power — what's been tried, what works, and who is doing it.
+  tagline: Deeply-cited research syntheses on hard questions — surveying what's been tried, what the evidence actually supports, and who is advancing it.
   actions:
-    - text: Current State
-      link: /my-wiki/current-state/global-wealth-concentration/
+    - text: Browse the research
+      link: /current-state/global-wealth-concentration/
       icon: right-arrow
-    - text: Interventions
-      link: /my-wiki/interventions/progressive-taxation/
-      icon: right-arrow
-      variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
-## How this wiki is organized
+## Research questions
 
-<CardGrid stagger>
-	<Card title="1. Current state" icon="information">
-		How concentrated is wealth today, and how does that translate into political power?
-	</Card>
-	<Card title="2. Interventions" icon="seti:plan">
-		Specific policy and institutional levers, and the evidence on whether each one works.
-	</Card>
-	<Card title="3. Synthesis" icon="puzzle">
-		The most promising multipronged strategy combining the highest-evidence interventions.
-	</Card>
-	<Card title="4. Organizations" icon="seti:notebook">
-		Think tanks, advocacy groups, international institutions, and grassroots movements actively pushing these levers.
-	</Card>
-	<Card title="5. Career options" icon="rocket">
-		Concrete roles inside those organizations and how to qualify for them.
-	</Card>
+<CardGrid>
+	<LinkCard
+		title="How do we reduce global inequality?"
+		description="A synthesis on reducing the global concentration of wealth and power — the current state, specific interventions and their evidence, the most promising combined strategy, and the organizations and careers advancing it."
+		href="/current-state/global-wealth-concentration/"
+	/>
 </CardGrid>
 
-## Scope and limits
+*More research topics will be added here over time.*
 
-This wiki focuses on interventions with **at least one published empirical evaluation** or strong historical precedent. Speculative or untested proposals are noted but flagged. Geographic scope is global, with weight given to interventions feasible in high-income democracies and at international institutions, because that is where the largest stocks of concentrated wealth currently sit.
+---
+
+## Inside: Reducing Global Inequality
+
+<CardGrid stagger>
+	<LinkCard title="1. Current state" href="/current-state/global-wealth-concentration/" description="How concentrated is wealth today, and how does that translate into political power?" />
+	<LinkCard title="2. Interventions" href="/interventions/progressive-taxation/" description="Specific policy and institutional levers, and the evidence on whether each one works." />
+	<LinkCard title="3. Synthesis" href="/synthesis/prioritized-interventions/" description="The most promising multipronged strategy combining the highest-evidence interventions." />
+	<LinkCard title="4. Organizations" href="/organizations/research-policy-institutes/" description="Think tanks, advocacy groups, international institutions, and grassroots movements pushing these levers." />
+	<LinkCard title="5. Career options" href="/careers/research-and-policy-roles/" description="Concrete roles inside those organizations and how to qualify for them." />
+</CardGrid>
+
+This research focuses on interventions with **at least one published empirical evaluation** or strong historical precedent. Speculative or untested proposals are noted but flagged. Geographic scope is global, with weight given to interventions feasible in high-income democracies and at international institutions, because that is where the largest stocks of concentrated wealth currently sit.
 
 The synthesis is opinionated: it ranks interventions by a combination of effect size, political tractability, and reversibility. Reasonable people will weight these differently — readers are encouraged to follow the citations and form their own judgment.

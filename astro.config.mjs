@@ -7,7 +7,7 @@ export default defineConfig({
 	site: 'https://my-wiki.vercel.app',
 	integrations: [
 		starlight({
-			title: 'MOST PROMISING INTERVENTIONS TO REDUCE GLOBAL INEQUALITY',
+			title: 'Answering Hard Questions',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/jasonjames81/my-wiki' }],
 			sidebar: [
 				{
