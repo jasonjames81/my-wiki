@@ -1,0 +1,93 @@
+---
+title: Financial Regulation
+description: Beneficial-ownership transparency, capital controls, banking regulation, and the offshore wealth system as inequality levers.
+---
+
+A non-trivial share of top-1% wealth lives outside the visible economy. Zucman (2013, 2024) estimates global offshore wealth at roughly $10–12 trillion, with about 25% of that figure attributable to households in the top 0.01%. Offshore wealth is invisible to tax authorities, to inequality statistics, and to political consequences — which means financial regulation aimed at making this wealth visible is, in effect, an upstream intervention that conditions every other lever in this wiki.
+
+The 2010s and 2020s have seen meaningful progress on transparency: the OECD Common Reporting Standard (CRS), the U.S. FATCA framework, the EU Anti-Money-Laundering Directives, and the U.S. Corporate Transparency Act (beneficial-ownership registry, effective 2024) have collectively raised the cost of secrecy. Evidence (Johannesen et al. 2020; Alstadsæter, Johannesen & Zucman 2019) shows that CRS adoption reduced offshore deposits by 15–25% in early-adopting jurisdictions.
+
+Beyond transparency, financial regulation affects concentration through three additional channels: **capital controls** (reduce capital mobility and therefore tax-base mobility), **banking regulation** (size limits, leverage caps, and deposit-taking restrictions reduce rents in the financial sector itself), and **shadow-banking regulation** (prevents wealth from migrating to less-regulated vehicles).
+
+## Lever inventory
+
+| Lever                                  | Target                              | Evidence base              |
+| -------------------------------------- | ----------------------------------- | -------------------------- |
+| Beneficial-ownership registries        | Anonymous shell companies / trusts  | Strong (CRS, FATCA, CTA)   |
+| Automatic information exchange (CRS)   | Offshore deposits                   | Strong; ~20% deposit drop  |
+| Country-by-country corporate reporting | Profit shifting                     | Moderate (EU implementation) |
+| Capital controls                       | Tax-base mobility                   | Mixed (macro tradeoffs)    |
+| Bank size / leverage caps              | Financial-sector rents              | Moderate                   |
+| Carried-interest reform                | Hedge-fund / PE manager compensation | Modest revenue impact     |
+| Real-estate beneficial ownership       | London / NY / Vancouver luxury real estate | Emerging evidence    |
+
+## The Zucman / Alstadsæter offshore-wealth estimates
+
+The foundational estimate of global offshore wealth is [Zucman (2013, *QJE*, "The Missing Wealth of Nations")](https://gabriel-zucman.eu/files/Zucman2013QJE.pdf). The methodology exploits a systematic accounting discrepancy in international portfolio investment statistics: when country A's residents hold securities in country B, those holdings appear as a *liability* on B's external balance sheet (foreigners owning B's securities) but should mirror an *asset* on A's external balance sheet (A's residents owning foreign securities). When you sum across all countries, total reported foreign assets should equal total reported foreign liabilities. They do not. Liabilities exceed assets by a substantial margin — implying that some assets exist in some country's books but no household reports owning them.
+
+Zucman attributes this discrepancy to wealth held through tax-haven intermediaries that are not properly recorded as personal wealth in the residence country. Calibrating the discrepancy to identifiable haven flows produces an estimate of **~8% of global household financial wealth held offshore — ~$7.6 trillion in 2014**, growing rapidly since. Updated estimates push the figure to ~$10–12 trillion by 2024.
+
+The distributional kicker is [Alstadsæter, Johannesen & Zucman (2019, *AER*, "Tax Evasion and Inequality")](https://www.aeaweb.org/articles?id=10.1257%2FAER.20172043). Using leaked HSBC Switzerland ("Swiss Leaks"), Mossack Fonseca ("Panama Papers"), and Scandinavian tax-amnesty records matched to administrative wealth records in Norway, Sweden, and Denmark, the authors document:
+
+- **The top 0.01% of households own ~50% of all offshore wealth.**
+- **The top 0.1% own ~80%.**
+- **Tax evasion rises sharply with wealth**: ~3% of personal taxes evaded on average, but ~25–30% by the top 0.01% (households with >$45M net wealth in Scandinavia).
+- **Top 0.01% wealth shares rise by ~25% when offshore wealth is included** in the Scandinavian baseline.
+
+The methodology has two important limitations. First, the leaked-data sources are themselves selective — Swiss Leaks captured one bank, Panama Papers one law firm, and the universe of offshore providers is much larger. Both data sources almost certainly under-state the true scale. Second, the offshore-wealth estimates capture *financial* wealth held through anonymous structures; they miss real estate (covered separately below), art, classic cars, and other physical assets held through nominees.
+
+The implication for the wealth-concentration discussion in [Section 1](/current-state/global-wealth-concentration/) is that headline top-share figures from any source likely under-state the top tail by 5–25%, with the highest under-statement at the very top.
+
+## CRS, FATCA, and the Corporate Transparency Act
+
+The 2010s and 2020s have seen four major coordinated international transparency regimes:
+
+| Regime                                | Year (in force) | Scope                                          | Coverage          |
+| ------------------------------------- | --------------- | ---------------------------------------------- | ----------------- |
+| **U.S. FATCA** (Foreign Account Tax Compliance Act) | 2014 | Bilateral; foreign financial institutions report U.S. account holders | ~120 IGAs signed |
+| **OECD CRS** (Common Reporting Standard) | 2017–2018      | Multilateral automatic exchange among signatory jurisdictions | ~120+ jurisdictions |
+| **EU AMLD** (Anti-Money Laundering Directives) | 2015–2024 (4–6th iterations) | Beneficial-ownership registries; EU member states | EU 27           |
+| **U.S. Corporate Transparency Act (CTA)** | 2024 | Beneficial-ownership reporting to FinCEN for all U.S. legal entities | ~32M entities (initial scope) |
+
+The empirical evidence is that **these instruments work, but at less than 100% effectiveness**. [Johannesen, Langetieg, Reck, Risch & Slemrod (2020, *NBER WP 26157*)](https://www.taxobservatory.eu/repository/tax-evasion-and-inequality/) document that early-adopting CRS jurisdictions saw **15–25% drops in offshore deposits** in the years following adoption, with the response concentrated at the very top of the wealth distribution. The IRS Offshore Voluntary Disclosure programs that accompanied FATCA implementation produced ~56,000 disclosures of $11.1 billion in tax revenue between 2009 and 2018.
+
+The remaining gaps are well-known:
+
+1. **Non-CRS jurisdictions** (notably the U.S., which uses FATCA bilaterally but is not a CRS signatory; this asymmetry has made the U.S. itself one of the world's largest tax havens for foreign wealth).
+2. **Real estate** is excluded from financial-account reporting (see next section).
+3. **Beneficial ownership of operating companies** under FATCA/CRS is reported by the financial institution, but indirect ownership through layered structures can mask the ultimate beneficial owner. The CTA addresses this for U.S. entities but only at the entity level, not the asset level.
+4. **Art, gold, classic cars, and other physical assets** are entirely outside the regime.
+5. **Cryptocurrency** has been the largest growth area for hidden wealth in the 2020s; the OECD's Crypto-Asset Reporting Framework (CARF), agreed in 2023 and beginning implementation 2026, addresses this but with substantial gaps for self-custodied assets.
+
+The CTA implementation has been politically contested. After initial implementation in early 2024, a Texas district court issued a nationwide preliminary injunction in December 2024 (*National Small Business United v. Yellen*); the injunction was partially lifted in 2025; FinCEN issued a March 2025 interim final rule narrowing the scope to foreign-owned entities only. The substantive scope of U.S. beneficial-ownership transparency in 2026 is therefore meaningfully narrower than the original CTA design intended.
+
+## Real estate is the new offshore
+
+As financial transparency has improved, the locus of hidden wealth has shifted measurably toward real estate. Luxury real estate in London, New York, Vancouver, Miami, Sydney, Hong Kong, Dubai, and several other "global cities" has become the dominant vehicle for cross-border wealth that wants to remain anonymous. The reasons are structural:
+
+- Real estate is largely outside the CRS/FATCA regime, which targets *financial* accounts.
+- Beneficial ownership of property can be held through layered LLCs, trusts, and nominees that historically have not been subject to public disclosure.
+- Real estate combines wealth preservation with use value (the buyer can live in or visit the property).
+- High-end real estate markets in many cities accept foreign capital eagerly and have lobbied against transparency reforms.
+
+The first major regulatory response was the **U.K. Register of Overseas Entities**, established by the [Economic Crime (Transparency and Enforcement) Act 2022](https://www.gov.uk/guidance/register-an-overseas-entity), which came into force on 1 August 2022. The register requires any overseas entity that owns or wishes to acquire U.K. real estate to disclose its beneficial owners to Companies House, with HM Land Registry blocked from registering disposals without a valid Overseas Entity ID. The legislation passed unusually rapidly (in weeks rather than years) under political pressure from the Russian invasion of Ukraine. The transition period for existing owners ended in January 2023; failure to comply is a criminal offense.
+
+**Canada** has implemented the parallel approach at provincial and federal levels. British Columbia's [Land Owner Transparency Registry (LOTR)](https://www2.gov.bc.ca/gov/content/housing-tenancy/real-estate-bc/land-owner-transparency-registry) launched in November 2020 and opened to public search in April 2021 — the first beneficial-interest registry of its kind in Canada. The federal beneficial-ownership registry committed at the 2021 Summit for Democracy launched in 2024–25. British Columbia has also implemented a residential-property "flipping tax" (effective 1 January 2025) that targets short-hold foreign-investor property activity.
+
+The U.S. has lagged on real-estate transparency despite being a major destination for hidden cross-border wealth. The FinCEN Geographic Targeting Orders (GTOs) require title insurers in selected metro areas (Manhattan, Miami-Dade, Los Angeles, San Francisco, San Diego, Honolulu, Boston, several Texas counties) to report cash purchases of residential property above thresholds — but the program has been narrow, inconsistently extended, and entirely focused on cash purchases rather than the more common LLC-and-mortgage structure used by sophisticated buyers. Comprehensive U.S. real-estate beneficial-ownership reform remains a Tier 2 agenda item.
+
+## Capital controls: the case for and against
+
+A more aggressive financial-regulation tool is **capital controls** — restrictions on cross-border financial flows. The post-1944 Bretton Woods system included substantial capital controls by design. Keynes himself argued that "control of capital movements, both inward and outward, should be a permanent feature of the post-war system," viewing restrictions on speculative international financial transactions as necessary to preserve domestic policy autonomy. The controls were dismantled gradually from 1971 (collapse of fixed exchange rates) through the 1990s (final removal in most advanced economies).
+
+The empirical evidence on the effectiveness of the Bretton Woods controls is mixed. [Gourinchas, Rey & Govillot (2024, *NBER WP 31595*)](https://www.nber.org/system/files/working_papers/w31595/w31595.pdf) estimate a general equilibrium model and find that world output would have been ~0.5% higher under perfect capital mobility — implying meaningful real costs of the controls. But this calculation excludes the *insurance* value of the controls in preventing crises and preserving policy space, which is the main argument advanced by their proponents.
+
+The post-2008 IMF position has shifted notably toward acceptance of *macroprudential* capital controls — temporary, targeted measures to manage capital-flow volatility — even as it remains opposed to permanent broad-based controls. Several emerging-market economies (Brazil, India, Korea, Indonesia, Chile) maintain or have re-introduced selective capital controls without obvious economic damage; the empirical case that controls are inherently destructive has weakened substantially.
+
+For the wealth-concentration agenda, the relevance of capital controls is indirect: they **reduce the credibility of capital-flight threats** that constrain domestic progressive taxation. A country that maintains exit-taxation, beneficial-ownership transparency, and selective controls on outward financial flows can sustain higher domestic tax rates than one that relies on voluntary compliance alone. The argument is not for restoring Bretton Woods-era restrictions wholesale but for strengthening the specific instruments that bind the most-mobile wealth.
+
+## Interaction with global tax coordination
+
+Financial-transparency reforms and global tax coordination are deeply complementary. CRS and FATCA make wealth visible across borders; without that visibility, OECD Pillar Two and the Zucman billionaire minimum tax would be unenforceable. Conversely, the political appeal of transparency reforms depends partly on the existence of substantive tax architecture that can use the new information — pure transparency without enforceable tax claims produces compliance costs without revenue gains.
+
+The two-part agenda — visibility plus coordination — is the substantive content of the "make wealth visible" pillar in [Synthesis: Core Strategy](/synthesis/core-strategy/). The instruments on this page (CRS, FATCA, beneficial ownership, real-estate registries) supply the visibility; the instruments in [Global Tax Coordination](/interventions/global-tax-coordination/) (Pillar Two, billionaire minimum tax, UN tax convention) supply the coordination. Either alone is substantially weaker than the combination.

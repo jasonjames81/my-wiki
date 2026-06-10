@@ -6,19 +6,28 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'MOST PROMISING INTERVENTIONS TO REDUCE GLOBAL INEQUALITY',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: '1. Current State',
+					items: [{ autogenerate: { directory: 'current-state' } }],
 				},
 				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: '2. Interventions',
+					items: [{ autogenerate: { directory: 'interventions' } }],
+				},
+				{
+					label: '3. Synthesis',
+					items: [{ autogenerate: { directory: 'synthesis' } }],
+				},
+				{
+					label: '4. Organizations',
+					items: [{ autogenerate: { directory: 'organizations' } }],
+				},
+				{
+					label: '5. Career Options',
+					items: [{ autogenerate: { directory: 'careers' } }],
 				},
 			],
 		}),

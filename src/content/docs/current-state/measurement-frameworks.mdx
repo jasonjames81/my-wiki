@@ -1,0 +1,81 @@
+---
+title: Measurement Frameworks
+description: The main metrics used to quantify inequality — Gini, Palma, top-share, and wealth-to-income ratios — and where each one breaks down.
+---
+
+You cannot intervene on what you cannot measure, and the choice of metric quietly determines which interventions look effective. The Gini coefficient, the most-cited measure, is dominated by changes in the middle of the distribution and is relatively insensitive to what happens in the top 1% — exactly where most of the action sits in modern wealth concentration. This page surveys the main alternatives and notes which metric to use for which question.
+
+The short version: use **top shares** (top 1%, top 0.1%) for questions about elite concentration; use the **Palma ratio** for questions about top-vs-bottom polarization; use the **wealth-to-income ratio (β)** for questions about the structural weight of inherited capital; and reserve the **Gini coefficient** for cross-country comparisons where you want a single summary number and accept that it will be a blurry one.
+
+Methodology choices also matter. WID uses a "distributional national accounts" approach that imputes undeclared offshore wealth, while household surveys (LIS, SCF) under-capture it. Differences of 5–10 percentage points in top-1% wealth shares between sources are typically driven by these methodological gaps, not by genuine measurement noise.
+
+## Metrics compared
+
+| Metric                       | What it captures                              | Strengths                          | Weaknesses                                     |
+| ---------------------------- | --------------------------------------------- | ---------------------------------- | ---------------------------------------------- |
+| Gini coefficient             | Single-number summary of full distribution    | Comparable across countries        | Insensitive to top tail; conflates income/wealth dynamics |
+| Palma ratio                  | Top 10% share ÷ bottom 40% share              | Sensitive to both tails            | Ignores middle; less standardized              |
+| Top 1% / Top 0.1% share      | Share of income or wealth held by top slice   | Direct measure of concentration    | Sensitive to offshore wealth assumptions       |
+| Wealth-to-income ratio (β)   | Aggregate private wealth ÷ national income    | Captures structural inheritance weight | National-level only; no within-country signal |
+| 99/50 ratio                  | Top 1% income ÷ median income                 | Communicates relative position     | Like Palma, blind to extreme tail              |
+| Billionaire wealth / GDP     | Forbes count ÷ GDP                            | Tracks the extreme tail directly   | Forbes coverage is incomplete and political    |
+
+## The Pareto mathematics behind top-share estimation
+
+The defining feature of income and wealth distributions is their *heavy upper tail*: the top of the distribution is consistently better described by a Pareto distribution than by a Normal distribution. A Pareto distribution is parameterized by a single shape parameter (the "Pareto coefficient" *α*), which determines how slowly the tail decays. Smaller *α* means a fatter tail and more concentration at the very top. Modern income distributions in advanced economies have *α* in the range 1.5–2.5; the lower the value, the more wealth or income is concentrated in the very top.
+
+This matters because Pareto distributions have a remarkable invariance property: the share of total income or wealth held above any given threshold *x* depends only on *α*, not on *x*. The implication is that if you know *α* — which can be estimated from any reasonably-measured slice of the upper tail — you can extrapolate to the very top, even where direct measurement is incomplete. This is the mathematical foundation of the Piketty–Saez top-share series ([Piketty & Saez 2003, *QJE*, "Income Inequality in the United States, 1913–1998"](https://eml.berkeley.edu/~saez/pikettyqje.pdf)) and most modern top-shares estimation.
+
+The standard Pareto Type I assumption has known weaknesses, especially in the *transition zone* between the bulk of the distribution and the upper tail. [Blanchet, Fournier & Piketty (2022, *JoEI*, "Generalized Pareto Curves: Theory and Applications")](http://piketty.pse.ens.fr/files/BlanchetFournierPiketty2022.pdf) developed a more flexible interpolation approach (the "generalized Pareto curve") that uses the entire shape of the empirical distribution rather than committing to a single *α*. The generalized Pareto interpolation method performs several times better than the standard methods in cross-validation tests and is the methodology underlying the WID's modern top-shares series.
+
+The macroeconomic-theory connection is developed in [Jones (2015, *JEP*, "Pareto and Piketty: The Macroeconomics of Top Income and Wealth Inequality")](https://www.aeaweb.org/articles?id=10.1257%2Fjep.29.1.29), which shows how simple stochastic models of returns to capital and labor can generate Pareto distributions endogenously, with the shape parameter *α* depending on the gap between the rate of return on capital and the growth rate of the economy. The lower the difference (g − r), the fatter the upper tail. This connects directly to the Piketty *r > g* framework discussed in [Historical Trajectory](/current-state/historical-trajectory/).
+
+## Why surveys undercount the top 1%, and the WID correction
+
+Household surveys (the Survey of Consumer Finances in the U.S., Wealth and Assets Survey in the U.K., LIS data globally) systematically under-capture the top 1% — and especially the top 0.1% and top 0.01% — for three structural reasons. First, response rates fall sharply at the top, with billionaires almost never participating. Second, even respondents in the top 1% under-report capital income, because complex assets (private equity, partnerships, foreign holdings) are easy to omit. Third, sampling frames are typically built from address-based registers that miss highly mobile and offshore-residing wealthy households entirely. The cumulative effect is to understate top wealth shares by roughly 5–15 percentage points in most jurisdictions.
+
+The reconciliation literature is well-developed. [Burkhauser, Feng, Jenkins & Larrimore (2009, NBER WP 15320)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1476503) showed that the gap between IRS tax-data estimates (high inequality) and CPS survey-data estimates (lower inequality) of U.S. top income shares is largely explained by survey topcoding and undersampling at the top — and that with internal CPS data and a matched income concept, survey estimates closely track tax-data estimates for most of the period. [Larrimore, Burkhauser, Auten & Armour (2017, NBER WP 23007)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2892431) extended this to capital gains and showed that comprehensive income measures further reduce (but do not eliminate) the gap.
+
+The World Inequality Database's Distributional National Accounts (DINA) approach addresses the survey-undercount problem in three layers:
+
+1. **Income tax records** as the primary source for the top of the distribution, where they exist and can be accessed.
+2. **Capitalization** of observed capital income at asset-class-specific rates of return to back out underlying wealth stocks ([Saez & Zucman 2016, *QJE*](https://eml.berkeley.edu/~saez/saez-zucmanNBER14wealth.pdf)).
+3. **Offshore-wealth imputation** based on the Zucman 2013 *QJE* estimates of cross-border financial discrepancies, allocated to the top of the distribution per the Alstadsæter–Johannesen–Zucman 2019 distributional findings.
+
+The result is a series that is internally consistent across countries and over time, but that depends on several modeling assumptions (capitalization rates, offshore allocation) that are themselves contested. Conservative critics (Auten & Splinter 2024, JPE) re-estimate U.S. top shares with different assumptions and produce somewhat lower numbers — though even the most conservative reanalyses leave the post-1980 increase in concentration intact.
+
+## Wealth vs. income vs. consumption: when each one matters
+
+The three concepts measure different things and can move in opposite directions over the same period.
+
+| Concept       | What it captures                          | Best for                                                  | Worst for                              |
+| ------------- | ----------------------------------------- | --------------------------------------------------------- | -------------------------------------- |
+| **Income**    | Annual flow of earnings + capital returns | Tracking labor-market and tax-policy changes year to year | Capturing inherited or accumulated wealth |
+| **Wealth**    | Stock of assets minus liabilities          | Capturing intergenerational position and elite power      | Year-to-year policy effect attribution; valuation noise |
+| **Consumption** | Annual spending by household           | Welfare comparisons; measuring living standards          | Capturing top-tail concentration; saving behavior of the rich |
+
+The interesting empirical finding is that the three measures *diverge sharply* in the post-1980 period. U.S. *income* inequality rose substantially. U.S. *wealth* inequality rose even more substantially (because top incomes were saved at much higher rates than middle and bottom incomes, compounding into wealth). U.S. *consumption* inequality, however, rose much less.
+
+[Meyer & Sullivan (2023, *JPE*, "Consumption and Income Inequality in the United States since the 1960s")](https://cid.harris.uchicago.edu/files/2023/04/Meyer-Sullivan-2023-JPE.pdf) is the most carefully measured recent assessment and finds that with their preferred consumption measure (focusing on well-measured components — imputed rent, food at home, gasoline, communication, motor vehicles), consumption inequality rose only modestly over 1960–2019 even as income inequality rose sharply. Earlier work by [Aguiar & Bils (2015, *AER*, "Has Consumption Inequality Mirrored Income Inequality?")](https://www.aeaweb.org/articles?id=10.1257/aer.20120599) reached the opposite conclusion on a different consumption measure; the disagreement is genuinely about measurement.
+
+The political-economy implication is that headline figures depend strongly on which concept is reported. Conservative commentators citing flat consumption inequality and progressive commentators citing rising wealth inequality can both be right about their preferred measure while reaching opposite policy conclusions. For the purposes of this wiki — interventions targeting concentrated wealth and power — *wealth* is the primary measure of interest, because it captures the stock of resources convertible into political influence. *Income* matters as a secondary measure for tracking flow-policy effects (e.g., tax reform). *Consumption* matters mainly for welfare and poverty discussions, not for power-concentration discussions.
+
+For three-dimensional analysis on the same individuals, [Fisher, Johnson, Smeeding & Thompson (2018)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6097710/) document the consistent ranking: wealth inequality > income inequality > consumption inequality, with the wealth-income gap larger at the very top and the income-consumption gap larger at the bottom.
+
+## Practical guide: which metric for which argument
+
+The practical implication of the conceptual differences above is that the *right* metric depends on the question being asked. Mismatched metrics are one of the most common errors in inequality argumentation.
+
+| Question                                                          | Best metric                                | Why                                                                                  |
+| ----------------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------ |
+| How much political power is concentrated at the top?              | Top 1% / 0.1% **wealth** share             | Wealth is the convertible stock; income is a flow                                    |
+| How effective is the income tax at compressing inequality?        | Pre- vs. post-tax **income** Gini or Palma | Income tax operates on flows                                                          |
+| How well-off is the median household relative to the top?         | 99/50 **income** ratio                     | Communicates relative position in flow terms                                          |
+| How much have living standards diverged across the distribution?  | **Consumption** percentile ratios          | Captures actual material consumption, not theoretical purchasing power                |
+| Is concentration getting worse over time?                         | Top 1% **wealth** share + WID series       | Long, consistent series; fatter tail captures the meaningful variation                |
+| How much offshore wealth is missing from official statistics?     | WID with vs. without offshore correction   | Direct decomposition of the missing-wealth adjustment                                 |
+| How does the U.S. compare to other countries?                     | **Wealth** Gini + top 10% share, multiple sources | Single metrics mask the dimensions on which countries differ; show several          |
+| Are policy reforms reducing concentration?                        | Top 1% **wealth** share, 5-year smoothed   | Wealth stocks turn over slowly; year-to-year noise dominates short-window analyses    |
+| How concentrated is income at the very top of the labor market?   | Top 0.1% **labor income** share            | Distinguishes superstar earnings from capital concentration                           |
+
+Two recurring errors are worth flagging. First, citing *Gini* coefficients for top-end concentration claims: the Gini is dominated by the middle of the distribution and is largely insensitive to whether the top 1% holds 30% or 40% of total wealth. Use top-share metrics for top-end claims. Second, comparing *consumption* inequality across countries to argue that wealth concentration "isn't really that bad": the comparison is logically valid but answers a different question than the one being asked. The four-pillar strategy in [Synthesis: Core Strategy](/synthesis/core-strategy/) is responding to wealth concentration and its political-power conversion, not to consumption inequality, and should be evaluated on the appropriate metric.
