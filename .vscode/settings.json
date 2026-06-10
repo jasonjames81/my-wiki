@@ -24,5 +24,6 @@
     "rehype", "rentier", "Rosen", "Saez", "Santos", "sectoral",
     "Smeeding", "Splinter", "Starlight", "sufficientarian",
     "sufficientarianism", "Vercel", "Zucman"
-  ]
+  ],
+  "workbench.colorTheme": "Solarized Light"
 }
