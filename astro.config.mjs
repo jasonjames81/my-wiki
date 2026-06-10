@@ -4,10 +4,12 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://jasonjames81.github.io',
+	base: '/my-wiki',
 	integrations: [
 		starlight({
 			title: 'MOST PROMISING INTERVENTIONS TO REDUCE GLOBAL INEQUALITY',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/jasonjames81/my-wiki' }],
 			sidebar: [
 				{
 					label: '1. Current State',
