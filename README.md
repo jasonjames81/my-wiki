@@ -36,7 +36,7 @@ npm run preview  # preview the production build locally
 npm run publish -- "message"   # commit + push (deploys via Vercel)
 ```
 
-Requires Node ≥ 22.12 (Astro 6). Content-editing workflow and conventions: [EDITING.md](./EDITING.md). Starlight template reference: [STARLIGHT.md](./STARLIGHT.md).
+Requires Node ≥ 22.12 (Astro 6). Starlight template reference: [STARLIGHT.md](./STARLIGHT.md).
 
 ## Deployment
 

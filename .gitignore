@@ -19,3 +19,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# local-only editing/voice notes (not for the public repo)
+EDITING.md
