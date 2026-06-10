@@ -1,0 +1,28 @@
+{
+  // Prose-friendly editing for content files.
+  "files.associations": { "*.mdx": "mdx" },
+  "files.eol": "\n",
+  "[mdx]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": { "comments": "off", "strings": "off", "other": "off" }
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on"
+  },
+
+  // Spellcheck prose, but not code blocks or URLs.
+  "cSpell.enableFiletypes": ["mdx"],
+  "cSpell.ignoreRegExpList": ["/\\]\\([^)]*\\)/", "/https?:\\/\\/\\S+/"],
+  "cSpell.words": [
+    "Aguiar", "antitrust", "Auten", "Bils", "Bretton", "Buchanan",
+    "Deaton", "DINA", "Diamond", "deadweight", "egalitarian",
+    "Frankfurt", "Furceri", "Gabaix", "Gini", "Greenwood", "Guner",
+    "Hayek", "Kocharkov", "Landier", "Lazear", "Loungani", "Mankiw",
+    "Milanovic", "Mirrlees", "monopsony", "noopener", "noreferrer",
+    "Nozick", "oligarchy", "Okun", "Ostry", "Pagefind", "Palma",
+    "Parfit", "Piketty", "Pigouvian", "predistribution", "prioritarianism",
+    "rehype", "rentier", "Rosen", "Saez", "Santos", "sectoral",
+    "Smeeding", "Splinter", "Starlight", "sufficientarian",
+    "sufficientarianism", "Vercel", "Zucman"
+  ]
+}
