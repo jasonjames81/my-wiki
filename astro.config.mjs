@@ -4,8 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://jasonjames81.github.io',
-	base: '/my-wiki',
+	site: 'https://my-wiki.vercel.app',
 	integrations: [
 		starlight({
 			title: 'MOST PROMISING INTERVENTIONS TO REDUCE GLOBAL INEQUALITY',
