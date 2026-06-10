@@ -17,6 +17,7 @@ export default defineConfig({
 			title: 'Answering Hard Questions',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/jasonjames81/my-wiki' }],
 			sidebar: [
+				{ label: 'All research', link: '/research/' },
 				{
 					label: '1. Current State',
 					items: [{ autogenerate: { directory: 'current-state' } }],
@@ -37,6 +38,7 @@ export default defineConfig({
 					label: '5. Career Options',
 					items: [{ autogenerate: { directory: 'careers' } }],
 				},
+				{ label: 'About / Methodology', link: '/about/' },
 			],
 		}),
 	],
